@@ -1,23 +1,23 @@
 ;/********************************************************************************
 ;* exercise.asm: Implementering av PCI-avbrott för toggling av lysdioder.
-;*                Tre lysdioder anslutna till pin 8 - 10 (PORTB0 - PORTB2) 
-;*                togglas via nedtryckning av var sin tryckknapp ansluten till
-;*                pin 11 - 13 (PORTB3 - PORTB5) enligt nedan:
+;*               Tre lysdioder anslutna till pin 8 - 10 (PORTB0 - PORTB2) 
+;*               togglas via nedtryckning av var sin tryckknapp ansluten till
+;*               pin 11 - 13 (PORTB3 - PORTB5) enligt nedan:
 ;*
-;*                - Lysdiod 1 ansluten till pin 8 (PORTB0) togglas via
-;*                  nedtryckning av tryckknapp 1 ansluten till pin 11 (PORTB3).
-;*                - Lysdiod 2 ansluten till pin 9 (PORTB1) togglas via
-;*                  nedtryckning av tryckknapp 2 ansluten till pin 12 (PORTB4).
-;*                - Lysdiod 3 ansluten till pin 10 (PORTB2) togglas via
-;*                  nedtryckning av tryckknapp 3 ansluten till pin 13 (PORTB5).
+;*               - Lysdiod 1 ansluten till pin 8 (PORTB0) togglas via
+;*                 nedtryckning av tryckknapp 1 ansluten till pin 11 (PORTB3).
+;*               - Lysdiod 2 ansluten till pin 9 (PORTB1) togglas via
+;*                 nedtryckning av tryckknapp 2 ansluten till pin 12 (PORTB4).
+;*               - Lysdiod 3 ansluten till pin 10 (PORTB2) togglas via
+;*                 nedtryckning av tryckknapp 3 ansluten till pin 13 (PORTB5).
 ;*
-;*                OBS! Skriv inte över CPU-register R16 - R18 efter initiering,
+;*               OBS! Skriv inte över CPU-register R16 - R18 efter initiering,
 ;*                då dessa innehåller värden för enkel toggling av lysdioderna
-;*                via skrivning till register PINB med följande värden:
+;*               via skrivning till register PINB med följande värden:
 ;*
-;*                - R16 = (1 << LED1)
-;*                - R17 = (1 << LED2)
-;*                - R18 = (1 << LED3)
+;*               - R16 = (1 << LED1)
+;*               - R17 = (1 << LED2)
+;*               - R18 = (1 << LED3)
 ;********************************************************************************/
 .EQU LED1 = PORTB0 ; Lysdiod 1 ansluten till pin 8 (PORTB0).
 .EQU LED2 = PORTB1 ; Lysdiod 2 ansluten till pin 9 (PORTB1).

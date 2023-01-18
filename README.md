@@ -1,5 +1,10 @@
 # Anteckningar 2023-01-18
-Mer övning gällande avbrottsimplementering i assembler samt skapande av dataminne för emulerad CPU.
+Demonstration av timerkrets Timer 0 i assembler, övning gällande avbrottsimplementering i assembler 
+samt skapande av dataminne för emulerad CPU.
+
+Filen "timer0_demo.asm" utgör en demonstration av Timer 0 i assembler för toggling av en lysdiod 
+ansluten till pin 8 (PORTB0) var 100:e ms. Timern ställs in så att timergenererat avbrott sker 
+var 16.384:e ms, därmed togglas lysdioden ungefär var sjätte avbrott.
 
 Filen "exercise.asm" utgör en övningsuppgift innefattande PCI-avbrott i assembler.
 Tre lysdioder anslutna till pin 8 - 10 (PORTB0 - PORTB2) togglas via nedtryckning av 
